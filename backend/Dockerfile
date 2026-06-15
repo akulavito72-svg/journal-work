@@ -19,6 +19,9 @@ FROM node:20-alpine
 WORKDIR /app
 
 ENV NODE_ENV=production
+ENV PORT=5000
+ENV DATABASE_URL=postgresql://postgres:postgres@host.docker.internal:5432/work_journal?schema=public
+ENV FRONTEND_URL=http://localhost:5173
 
 RUN apk add --no-cache openssl
 
